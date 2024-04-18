@@ -20,6 +20,11 @@ func getCommands() map[string]CliCommand {
 			description: "Print help menu",
 			callback:    callbackHelp,
 		},
+		"map": {
+			name:        "map",
+			description: "Print a list of the possible locations",
+			callback:    callbackMap,
+		},
 		"exit": {
 			name:        "exit",
 			description: "Exit the Pokedex",
