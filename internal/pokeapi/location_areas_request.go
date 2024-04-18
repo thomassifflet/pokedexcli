@@ -18,7 +18,6 @@ func (c *Client) ListLocationAreas(pageUrl *string) (LocationAreasResponse, erro
 	dat, ok := c.cache.Get(fullUrl)
 	if ok {
 		// cache hit
-		fmt.Println("cache hit !")
 		locationAreasResp := LocationAreasResponse{}
 		err := json.Unmarshal(dat, &locationAreasResp)
 		if err != nil {
@@ -27,7 +26,6 @@ func (c *Client) ListLocationAreas(pageUrl *string) (LocationAreasResponse, erro
 
 		return locationAreasResp, nil
 	}
-	fmt.Println("cache miss!")
 
 	req, err := http.NewRequest("GET", fullUrl, nil)
 	if err != nil {

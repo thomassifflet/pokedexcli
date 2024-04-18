@@ -21,7 +21,6 @@ func callbackCatch(cfg *config, args ...string) error {
 	time.Sleep(50 * time.Millisecond)
 	const threshold = 50
 	randNumber := rand.Intn(pokemon.BaseExperience)
-	fmt.Println(threshold, randNumber, pokemon.BaseExperience)
 	if randNumber > threshold {
 		fmt.Printf("%s escaped !\n", pokemonName)
 	}
